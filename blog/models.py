@@ -9,3 +9,6 @@ class Blog(models.Model):
 
     def summary(self):  # makes a summary function to shorten body to 100 characters
         return self.body[:100]
+
+    def pub_date_pretty(self):
+        return self.pub_date.strftime('%b %e %Y')
