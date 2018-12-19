@@ -6,3 +6,6 @@ class Blog(models.Model):
     pub_date = models.DateTimeField()
     body = models.TextField(default='')
     image = models.ImageField(upload_to='images/')
+
+    def summary(self):  # makes a summary function to shorten body to 100 characters
+        return self.body[:100]
